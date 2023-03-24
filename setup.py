@@ -13,6 +13,6 @@ setup(
     long_description_content_type="text/markdown",
     url='https://github.com/ForexAndBeyond/candlestick-patterns',
     license='MIT',
-    packages=['candlestick'],
+    packages=['candlestick', 'candlestick.patterns'],
     install_requires=['pandas','requests'],
 )
