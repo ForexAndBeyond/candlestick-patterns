@@ -1,5 +1,6 @@
-# candlestick-patterns
-> Candlestick patterns detector
+# Candlestick Patterns
+
+This repo holds all of candlestick price-action patterns.
 
 ## Available patterns
 * Inverted Hammer
