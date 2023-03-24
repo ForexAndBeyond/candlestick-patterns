@@ -3,25 +3,30 @@
 This repo holds all of candlestick price-action patterns.
 
 ## Available patterns
-* Inverted Hammer
-* Hammer
-* Hanging man
-* Bearish/Bullish Harami
-* Dark cloud cover
-* Doji
-* Doji Star
-* Dragonfly doji
-* Gravestone doji
-* Bearish engulfing
-* Bullish engulfing
-* Morning star
-* Morning star doji
-* Piercing pattern
-* Rain drop
-* Rain drop doji
-* Star
-* Shooting star
+- Bearish Engulfing
+- Bearish Harami
+- Bullish Engulfing
+- Bullish Harami
+- Dark Cloud Cover
+- Doji Star
+- Doji
+- Dragonfly Doji
+- Evening Star Doji
+- Evening Star
+- Gravestone Doji
+- Hammer
+- Hanging Man
+- Inverted Hammer
+- Morning Star Doji
+- Morning Star
+- Piercing Pattern
+- Raindrop
+- Shooting Star
+- Star
 
+## Installation
+
+`pip install git+https://github.com/ForexAndBeyond/candlestick-patterns.git`
 
 ## How to use
 ### Dataframe requirements
@@ -59,7 +64,7 @@ df = candlestick.inverted_hammer(df, target='result')
 "True" indicates that pattern is detected at that candle
 
 ## Parameters
-All pattern detection methods receive 3 parametrs:
+All pattern detection methods receives 3 parameters:
 * target (String) - Indicates the column to which the result of detection is saved as boolean. 
 * is_reversed (Bool) - Pass True if rows in dataframe are in time descending order, otherwise False. Deafult is False.
 * ohlc (List) - Pass list of strings which indicates the column names of open/high/low/close prices in dataframe. Default: ["open", "high", "low", "close"]. 
