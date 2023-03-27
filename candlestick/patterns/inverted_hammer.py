@@ -13,6 +13,9 @@ class InvertedHammer(CandlestickFinder):
         high = candle[self.high_column]
         low = candle[self.low_column]
 
-        return (((high - low) > 3 * (open - close)) and
-                ((high - close) / (.001 + high - low) > 0.6)
-                and ((high - open) / (.001 + high - low) > 0.6))
+        is_long_upper_shadow = (high - close) / (high - low + 0.001) >= 0.6
+
+        is_short_lower_shadow = (high - open) / (high - low + 0.001) >= 0.6
+
+        return ((high - low) >= 3 * (open - close) and
+                 is_long_upper_shadow and is_short_lower_shadow)

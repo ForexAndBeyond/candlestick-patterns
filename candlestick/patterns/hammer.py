@@ -13,6 +13,9 @@ class Hammer(CandlestickFinder):
         high = candle[self.high_column]
         low = candle[self.low_column]
 
+        is_long_lower_shadow = ((close - low) / (.001 + high - low) > 0.6)
+
+        is_short_upper_shadow = ((open - low) / (.001 + high - low) > 0.6)
+
         return (((high - low) > 3 * (open - close)) and
-                ((close - low) / (.001 + high - low) > 0.6) and
-                ((open - low) / (.001 + high - low) > 0.6))
+                 is_long_lower_shadow and is_short_upper_shadow)
