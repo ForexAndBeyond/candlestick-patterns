@@ -5,8 +5,10 @@ This repo holds all of candlestick price-action patterns.
 ## Available patterns
 - Bearish Engulfing
 - Bearish Harami
+- Bearish Marubozu
 - Bullish Engulfing
 - Bullish Harami
+- Bullish Marubozu
 - Dark Cloud Cover
 - Doji Star
 - Doji
@@ -62,6 +64,11 @@ df = candlestick.inverted_hammer(df, target='result')
 | 2019-12-29 00:00:00 | False             |  7315.36 |  7528.45 |  7288    |  7388.24 |
 
 "True" indicates that pattern is detected at that candle
+
+### Unit Testing
+
+`python3 -m unittest discover -v`
+
 
 ## Parameters
 All pattern detection methods receives 3 parameters:

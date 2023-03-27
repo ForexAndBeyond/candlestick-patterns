@@ -34,6 +34,19 @@ def __get_class_by_name(class_name):
 def __create_object(class_name, target):
     return __get_class_by_name(class_name)(target=target)
 
+def bullish_marubozu(candles_df,
+                   ohlc=__default_ohlc,
+                   is_reversed=False,
+                   target=None):
+    bullmar = __create_object('BullishMarubozu', target)
+    return bullmar.has_pattern(candles_df, ohlc, is_reversed)
+
+def bearish_marubozu(candles_df,
+                   ohlc=__default_ohlc,
+                   is_reversed=False,
+                   target=None):
+    bearmar = __create_object('BearishMarubozu', target)
+    return bearmar.has_pattern(candles_df, ohlc, is_reversed)
 
 def bullish_hanging_man(candles_df,
                    ohlc=__default_ohlc,
